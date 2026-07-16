@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donnie Camisaria | Catálogo de Moda Masculina Premium</title>
+    <meta name="description" content="Explore o catálogo de luxo da Donnie Camisaria. Camisaria sob medida, xadrez, jeans e sport fino com caimento perfeito e acabamento artesanal.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">Donnie</span> Camisaria
+            </a>
+            <nav class="nav">
+                <a href="#catalogo" class="nav-link">Coleções</a>
+                <a href="#sobre" class="nav-link">Sobre Nós</a>
+                <a href="https://wa.me/5511999999999" target="_blank" class="nav-btn">Atendimento</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">Estilo & Sofisticação</span>
+            <h1 class="hero-title">Produção Própria & Alta Costura</h1>
+            <p class="hero-subtitle">Camisaria premium desenvolvida com tecidos nobres e acabamento minucioso. Conheça nossa coleção exclusiva para atacado e varejo.</p>
+            <a href="#catalogo" class="btn-primary-luxury">Explorar Coleção</a>
+        </div>
+        <div class="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalogo" class="catalog-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Exclusividade</span>
+                <h2 class="section-title">Nosso Catálogo</h2>
+                <p class="section-subtitle">Selecione uma categoria abaixo ou pesquise pelo produto ideal</p>
+            </div>
+
+            <!-- Filters Toolbar -->
+            <div class="toolbar">
+                <div class="categories">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="xadrez">Xadrez</button>
+                    <button class="filter-btn" data-filter="jeans">Jeans</button>
+                    <button class="filter-btn" data-filter="tencel">Tencel</button>
+                    <button class="filter-btn" data-filter="sport_fino">Sport Fino</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="O que você procura?" aria-label="Buscar produto">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Dynamic Products will be rendered here -->
+            </div>
+            
+            <div id="no-results" class="no-results hidden">
+                <p>Nenhum modelo encontrado para sua busca.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about-section">
+        <div class="container about-grid">
+            <div class="about-image-container">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop&q=80" alt="Ateliê Donnie Camisaria" class="about-image">
+                <div class="image-accent-border"></div>
+            </div>
+            <div class="about-text">
+                <span class="about-badge">Tradição & Qualidade</span>
+                <h2 class="about-title">Design Autoral e Fabricação Própria</h2>
+                <p>Com sede em Goiânia, a Donnie Camisaria é especialista na criação e produção de camisaria masculina de alto padrão. Atendemos o atacado com pedidos mínimos a partir de 8 peças e também desenvolvemos produções em formato *private label* para outras marcas.</p>
+                <p>Cada peça é cortada e costurada com extremo cuidado por profissionais experientes, utilizando as melhores matérias-primas do mercado, garantindo um caimento impecável e durabilidade que se destaca.</p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-num">100%</span>
+                        <span class="highlight-txt">Algodão Selecionado</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-num">Min. 8</span>
+                        <span class="highlight-txt">Peças no Atacado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-accent">Donnie</span> Camisaria
+                </a>
+                <p class="footer-desc">Referência em camisaria e calças masculinas de alto padrão. Envios rápidos para todo o Brasil.</p>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-title">Navegação</h3>
+                <ul>
+                    <li><a href="#catalogo">Coleções</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="https://wa.me/5511999999999" target="_blank">Atendimento WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3 class="footer-title">Contato</h3>
+                <p>📍 Goiânia - GO</p>
+                <p>📞 (11) 99999-9999</p>
+                <p>✉️ comercial@donniecamisaria.com.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Donnie Camisaria. Todos os direitos reservados. Design Premium.</p>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-modal" aria-label="Fechar">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-img-container">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <span id="modal-category" class="product-badge">Categoria</span>
+                    <h2 id="modal-title">Título do Produto</h2>
+                    <p id="modal-price" class="product-price">R$ 00,00</p>
+                    <p id="modal-desc" class="product-description">Descrição detalhada do produto.</p>
+                    
+                    <div class="modal-sizes-container">
+                        <span class="sizes-title">Tamanhos Disponíveis:</span>
+                        <div id="modal-sizes" class="sizes-list">
+                            <!-- Sizes dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <a id="modal-whatsapp-btn" href="#" target="_blank" class="btn-primary-luxury btn-whatsapp">
+                        <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.907h.004c4.368 0 7.926-3.558 7.93-7.93a7.897 7.897 0 0 0-2.333-5.596zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.98c-.197-.1-.1.21-.082.312-.224-.117-.43-.271-.6-.456-.142-.143-.247-.323-.306-.522-.056-.192-.02-.396.1-.564.12-.167.12-.271.18-.387.06-.117.03-.22-.015-.318-.045-.098-.387-.992-.53-1.343-.14-.34-.28-.29-.385-.296-.098-.005-.21-.006-.322-.006-.113 0-.294.043-.448.21-.154.167-.588.574-.588 1.401 0 .827.6 1.624.683 1.737.083.113 1.184 1.81 2.87 2.53.401.17.712.273.955.35.404.128.77.11 1.057.067.32-.047.98-.4 1.116-.787.135-.386.135-.718.095-.787-.04-.07-.15-.11-.347-.208z"/>
+                        </svg>
+                        Solicitar Orçamento / Atacado
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Widget -->
+    <div class="whatsapp-widget" id="whatsapp-widget">
+        <!-- Chat Card -->
+        <div class="whatsapp-card" id="whatsapp-card">
+            <div class="whatsapp-card-header">
+                <svg class="wa-header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.025l-1.34 4.985 5.09-1.334A9.92 9.92 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.63 0-3.23-.44-4.62-1.27l-.33-.2-3.04.8.81-2.98-.22-.34A8.01 8.01 0 0 1 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.2-5.75c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.59.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.6-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4-.13 0-.29 0-.44 0-.15 0-.4.06-.61.29-.21.23-.8.79-.8 1.92 0 1.13.82 2.22.94 2.37.12.15 1.62 2.47 3.92 3.47.55.24.98.38 1.31.48.55.18 1.05.15 1.45.09.44-.07 1.36-.56 1.55-1.09.19-.54.19-1 .13-1.09-.06-.1-.21-.15-.44-.27z"/>
+                </svg>
+
+                <div class="wa-header-text">
+                    <h3>Inicie uma conversa</h3>
+                    <p>Oi! Clique em um de nossos membros abaixo para conversar em alguns minutos.</p>
+                </div>
+            </div>
+            <div class="whatsapp-card-body">
+                <p class="wa-reply-time">A equipe normalmente responde em alguns minutos.</p>
+                <div class="wa-member-list">
+                    <!-- Member 1 -->
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Douglas!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos." target="_blank" class="wa-member-item">
+                        <div class="wa-member-avatar-container">
+                            <svg class="wa-member-avatar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                            <span class="wa-badge-online"></span>
+                        </div>
+                        <div class="wa-member-info">
+                            <span class="wa-member-name">Douglas Lopes</span>
+                            <span class="wa-member-role">Vendedor</span>
+                        </div>
+                        <svg class="wa-member-action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.025l-1.34 4.985 5.09-1.334A9.92 9.92 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.63 0-3.23-.44-4.62-1.27l-.33-.2-3.04.8.81-2.98-.22-.34A8.01 8.01 0 0 1 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.2-5.75c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.59.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.6-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4-.13 0-.29 0-.44 0-.15 0-.4.06-.61.29-.21.23-.8.79-.8 1.92 0 1.13.82 2.22.94 2.37.12.15 1.62 2.47 3.92 3.47.55.24.98.38 1.31.48.55.18 1.05.15 1.45.09.44-.07 1.36-.56 1.55-1.09.19-.54.19-1 .13-1.09-.06-.1-.21-.15-.44-.27z"/>
+                        </svg>
+                    </a>
+                    <!-- Member 2 -->
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Bonnie!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos." target="_blank" class="wa-member-item">
+                        <div class="wa-member-avatar-container">
+                            <svg class="wa-member-avatar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                            <span class="wa-badge-online"></span>
+                        </div>
+                        <div class="wa-member-info">
+                            <span class="wa-member-name">Bonnie Dutra</span>
+                            <span class="wa-member-role">Vendedora</span>
+                        </div>
+                        <svg class="wa-member-action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.025l-1.34 4.985 5.09-1.334A9.92 9.92 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.63 0-3.23-.44-4.62-1.27l-.33-.2-3.04.8.81-2.98-.22-.34A8.01 8.01 0 0 1 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.2-5.75c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.59.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.6-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4-.13 0-.29 0-.44 0-.15 0-.4.06-.61.29-.21.23-.8.79-.8 1.92 0 1.13.82 2.22.94 2.37.12.15 1.62 2.47 3.92 3.47.55.24.98.38 1.31.48.55.18 1.05.15 1.45.09.44-.07 1.36-.56 1.55-1.09.19-.54.19-1 .13-1.09-.06-.1-.21-.15-.44-.27z"/>
+                        </svg>
+                    </a>
+                    <!-- Member 3 -->
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Douglas%20Filho!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos." target="_blank" class="wa-member-item">
+                        <div class="wa-member-avatar-container">
+                            <svg class="wa-member-avatar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                            <span class="wa-badge-online"></span>
+                        </div>
+                        <div class="wa-member-info">
+                            <span class="wa-member-name">Douglas Filho</span>
+                            <span class="wa-member-role">Vendedor</span>
+                        </div>
+                        <svg class="wa-member-action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.025l-1.34 4.985 5.09-1.334A9.92 9.92 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.63 0-3.23-.44-4.62-1.27l-.33-.2-3.04.8.81-2.98-.22-.34A8.01 8.01 0 0 1 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.2-5.75c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.59.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.6-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4-.13 0-.29 0-.44 0-.15 0-.4.06-.61.29-.21.23-.8.79-.8 1.92 0 1.13.82 2.22.94 2.37.12.15 1.62 2.47 3.92 3.47.55.24.98.38 1.31.48.55.18 1.05.15 1.45.09.44-.07 1.36-.56 1.55-1.09.19-.54.19-1 .13-1.09-.06-.1-.21-.15-.44-.27z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="wa-powered-by">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#A1A8B6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.8 13.5v-3.2c0-.2.1-.3.3-.3h3c.2 0 .3.1.3.3v3.2c0 .2-.1.3-.3.3h-3c-.2 0-.3-.1-.3-.3zm3.1-4.8c-.5-.3-1.1-.5-1.7-.5v-1.7c1.3 0 2.3.8 2.3 2.1 0 .9-.5 1.4-1.2 1.9-.6.4-.9.8-.9 1.4h-1.6c0-1.1.6-1.8 1.3-2.3.6-.4.8-.7.8-1 0-.6-.5-.9-1-.9z"/></svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bubble Tooltip on left -->
+        <div class="whatsapp-bubble" id="whatsapp-bubble">
+            <p class="wa-bubble-title">Preciso de ajuda?</p>
+            <p class="wa-bubble-subtitle">Converse conosco</p>
+        </div>
+
+        <!-- Main Button -->
+        <button class="whatsapp-trigger-btn" id="whatsapp-trigger-btn" aria-label="Abrir atendimento WhatsApp">
+            <!-- Close icon (hidden by default) -->
+            <svg class="wa-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <!-- WhatsApp Icon -->
+            <svg class="wa-icon-chat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.025l-1.34 4.985 5.09-1.334A9.92 9.92 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.63 0-3.23-.44-4.62-1.27l-.33-.2-3.04.8.81-2.98-.22-.34A8.01 8.01 0 0 1 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.2-5.75c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.59.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.6-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4-.13 0-.29 0-.44 0-.15 0-.4.06-.61.29-.21.23-.8.79-.8 1.92 0 1.13.82 2.22.94 2.37.12.15 1.62 2.47 3.92 3.47.55.24.98.38 1.31.48.55.18 1.05.15 1.45.09.44-.07 1.36-.56 1.55-1.09.19-.54.19-1 .13-1.09-.06-.1-.21-.15-.44-.27z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>
