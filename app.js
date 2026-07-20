@@ -6,7 +6,70 @@
 const WHATSAPP_NUMBER = '5562993132378'; // Substitua pelo número da loja com DDI e DDD (ex: 5511999999999)
 
 // State Management
-let products = [];
+// State Management
+const products = [
+  {
+    "id": 1,
+    "name": "Camisa Xadrez Manga Curta 100% Algodão",
+    "category": "xadrez",
+    "price": "Sob Consulta",
+    "description": "Camisa xadrez clássica manga curta confeccionada em tecido 100% algodão de alta qualidade. Toque macio, excelente durabilidade e caimento confortável.",
+    "sizes": ["P", "M", "G", "GG", "G1", "G2"],
+    "image": "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0223.jpg",
+    "images": [
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0223.jpg",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1620012253295-c05518e99309?w=600&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Camisa Jeans Premium Manga Longa",
+    "category": "jeans",
+    "price": "Sob Consulta",
+    "description": "Camisa jeans confeccionada em liocel/algodão leve, proporcionando o visual moderno do jeans com o conforto e maleabilidade de um tecido nobre.",
+    "sizes": ["P", "M", "G", "GG"],
+    "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Camisa Tencel Soft Manga Longa",
+    "category": "tencel",
+    "price": "Sob Consulta",
+    "description": "Confeccionada em fibra de Tencel (liocel), que oferece um caimento fluido, toque extremamente macio e excelente regulação térmica natural.",
+    "sizes": ["P", "M", "G", "GG"],
+    "image": "https://images.unsplash.com/photo-1620012253295-c05518e99309?w=600&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Camisa Xadrez Manga Curta Casual",
+    "category": "xadrez",
+    "price": "Sob Consulta",
+    "description": "Versão manga curta da nossa clássica xadrez. Ideal para composições casuais e dias quentes com estilo moderno.",
+    "sizes": ["P", "M", "G", "GG"],
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Calça Sport Fino Alfaiataria",
+    "category": "sport_fino",
+    "price": "Sob Consulta",
+    "description": "Calça sport fino com corte de alfaiataria moderno, tecido com elastano para maior conforto no dia a dia. Perfeita para usar com camisas sociais e casuais.",
+    "sizes": ["38", "40", "42", "44", "46", "48"],
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Bermuda Sport Fino Sarja",
+    "category": "sport_fino",
+    "price": "Sob Consulta",
+    "description": "Bermuda sport fino confeccionada em sarja acetinada com elastano. Modelagem levemente slim que traz elegância para momentos de lazer.",
+    "sizes": ["38", "40", "42", "44", "46"],
+    "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&auto=format&fit=crop&q=80"
+  }
+];
+
 let activeFilter = 'all';
 let searchQuery = '';
 
@@ -20,33 +83,20 @@ const searchInput = document.getElementById('search-input');
 const modal = document.getElementById('product-modal');
 const closeModalBtn = document.getElementById('close-modal');
 const modalImg = document.getElementById('modal-img');
+const modalImgContainer = document.querySelector('.modal-img-container');
 const modalTitle = document.getElementById('modal-title');
 const modalPrice = document.getElementById('modal-price');
 const modalDesc = document.getElementById('modal-desc');
 const modalCategory = document.getElementById('modal-category');
 const modalSizes = document.getElementById('modal-sizes');
 const modalWhatsappBtn = document.getElementById('modal-whatsapp-btn');
+const modalThumbnails = document.getElementById('modal-thumbnails');
 
 // Initial Load
 document.addEventListener('DOMContentLoaded', () => {
-    fetchProducts();
+    renderProducts();
     setupEventListeners();
 });
-
-// Fetch Products from Local JSON
-async function fetchProducts() {
-    try {
-        const response = await fetch('products.json');
-        if (!response.ok) {
-            throw new Error('Falha ao carregar produtos.');
-        }
-        products = await response.json();
-        renderProducts();
-    } catch (error) {
-        console.error('Erro ao buscar catálogo:', error);
-        productsGrid.innerHTML = `<p class="no-results">Erro ao carregar o catálogo de produtos. Por favor, tente novamente mais tarde.</p>`;
-    }
-}
 
 // Render Products Grid
 function renderProducts() {
@@ -124,6 +174,20 @@ function setupEventListeners() {
             closeModal();
         }
     });
+
+    // Zoom effect on modal main image (Pan on hover)
+    modalImgContainer.addEventListener('mousemove', (e) => {
+        const rect = modalImgContainer.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        modalImg.style.transformOrigin = `${x}% ${y}%`;
+        modalImg.style.transform = 'scale(1.8)';
+    });
+
+    modalImgContainer.addEventListener('mouseleave', () => {
+        modalImg.style.transformOrigin = 'center center';
+        modalImg.style.transform = 'scale(1)';
+    });
 }
 
 // Open Product Modal
@@ -134,6 +198,34 @@ function openModal(product) {
     modalPrice.textContent = product.price;
     modalDesc.textContent = product.description;
     modalCategory.textContent = translateCategory(product.category);
+
+    // Gallery Render Logic
+    modalThumbnails.innerHTML = '';
+    const productImages = product.images || [product.image];
+    
+    if (productImages.length > 1) {
+        modalThumbnails.style.display = 'flex';
+        productImages.forEach((imgUrl, index) => {
+            const thumb = document.createElement('img');
+            thumb.src = imgUrl;
+            thumb.alt = `${product.name} - Foto ${index + 1}`;
+            thumb.className = 'modal-thumb' + (index === 0 ? ' active' : '');
+            
+            // Hover/Click to change main image in modal
+            const setActiveImage = () => {
+                modalImg.src = imgUrl;
+                document.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            };
+            
+            thumb.addEventListener('click', setActiveImage);
+            thumb.addEventListener('mouseover', setActiveImage); // Switch on hover for premium feel
+            
+            modalThumbnails.appendChild(thumb);
+        });
+    } else {
+        modalThumbnails.style.display = 'none';
+    }
 
     // Sizes Rendering
     modalSizes.innerHTML = '';

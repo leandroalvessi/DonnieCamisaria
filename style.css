@@ -810,22 +810,59 @@ li {
 
 .modal-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 6.5fr 3.5fr; /* 65% para imagem/galeria, 35% para informações */
+}
+
+.modal-gallery {
+    display: flex;
+    flex-direction: column;
+    background-color: #F3F1ED;
+    border-right: 1px solid rgba(0,0,0,0.03);
 }
 
 .modal-img-container {
-    height: 600px;
-    background-color: #F3F1ED;
+    height: 650px;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    cursor: zoom-in;
 }
 
 .modal-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.1s ease-out;
+}
+
+.modal-thumbnails {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background-color: #FDFDFD;
+    overflow-x: auto;
+    border-top: 1px solid rgba(0,0,0,0.03);
+    justify-content: center;
+}
+
+.modal-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.modal-thumb:hover, .modal-thumb.active {
+    border-color: var(--accent);
+    opacity: 1;
 }
 
 .modal-info {
-    padding: 50px;
+    padding: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -904,6 +941,9 @@ li {
     color: white;
     border: 1px solid #111827;
     box-shadow: none;
+    padding: 12px 24px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
 }
 
 .btn-whatsapp:hover {
@@ -1233,6 +1273,17 @@ li {
 
 /* Responsiveness */
 @media (max-width: 992px) {
+    .modal {
+        align-items: flex-start;
+        overflow-y: auto;
+        padding: 20px 0;
+    }
+    
+    .modal-content {
+        margin: 20px auto;
+        max-height: none;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -1251,7 +1302,13 @@ li {
     }
     
     .modal-info {
-        padding: 40px 30px;
+        padding: 30px 20px;
+    }
+    
+    .close-btn {
+        top: 15px;
+        right: 15px;
+        z-index: 1010;
     }
 }
 
