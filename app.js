@@ -3,7 +3,7 @@
    ------------------------------------------------------------- */
 
 // Configuration
-const WHATSAPP_NUMBER = '5511999999999'; // Substitua pelo número da loja com DDI e DDD (ex: 5511999999999)
+const WHATSAPP_NUMBER = '5562993132378'; // Substitua pelo número da loja com DDI e DDD (ex: 5511999999999)
 
 // State Management
 let products = [];
