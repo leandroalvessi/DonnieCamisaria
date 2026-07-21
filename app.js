@@ -18,9 +18,20 @@ const products = [
     "image": "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0223.jpg",
     "images": [
       "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0223.jpg",
-      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1620012253295-c05518e99309?w=600&auto=format&fit=crop&q=80"
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0143.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0144.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0146-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0147-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0148-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0149-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0151-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0152-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0158-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0162-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0215-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0216-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0217-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0218-150x150.jpg",
     ]
   },
   {
