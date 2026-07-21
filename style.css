@@ -811,6 +811,7 @@ li {
 .modal-grid {
     display: grid;
     grid-template-columns: 6.5fr 3.5fr; /* 65% para imagem/galeria, 35% para informações */
+    min-width: 0;
 }
 
 .modal-gallery {
@@ -818,6 +819,8 @@ li {
     flex-direction: column;
     background-color: #F3F1ED;
     border-right: 1px solid rgba(0,0,0,0.03);
+    min-width: 0;
+    overflow: hidden;
 }
 
 .modal-img-container {
@@ -835,30 +838,119 @@ li {
     transition: transform 0.1s ease-out;
 }
 
+.modal-thumbnails-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #FDFDFD;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 10px 40px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 .modal-thumbnails {
     display: flex;
-    gap: 10px;
-    padding: 15px;
-    background-color: #FDFDFD;
+    gap: 8px;
+    padding: 4px 0;
     overflow-x: auto;
-    border-top: 1px solid rgba(0,0,0,0.03);
-    justify-content: center;
+    scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    /* Hide horizontal scrollbar completely across browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.modal-thumbnails::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+    width: 0;
+    height: 0;
 }
 
 .modal-thumb {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 4px;
     object-fit: cover;
     cursor: pointer;
     border: 2px solid transparent;
-    opacity: 0.6;
+    opacity: 0.65;
     transition: var(--transition);
+    flex-shrink: 0;
 }
 
 .modal-thumb:hover, .modal-thumb.active {
     border-color: var(--accent);
     opacity: 1;
+}
+
+.thumb-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    user-select: none;
+}
+
+.thumb-nav-btn.prev {
+    left: 6px;
+}
+
+.thumb-nav-btn.next {
+    right: 6px;
+}
+
+.thumb-nav-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2.5px;
+    transition: transform 0.2s ease;
+}
+
+.thumb-nav-btn:hover:not(:disabled):not(.disabled) {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(11, 15, 25, 0.2);
+}
+
+.thumb-nav-btn:hover:not(:disabled):not(.disabled).prev svg {
+    transform: translateX(-1px);
+}
+
+.thumb-nav-btn:hover:not(:disabled):not(.disabled).next svg {
+    transform: translateX(1px);
+}
+
+.thumb-nav-btn:disabled,
+.thumb-nav-btn.disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(245, 245, 245, 0.8);
+    color: #A0AEC0;
+    pointer-events: none;
+}
+
+.thumb-nav-btn.hidden {
+    display: none !important;
 }
 
 .modal-info {

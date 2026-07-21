@@ -20,18 +20,24 @@ const products = [
       "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0223.jpg",
       "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0143.jpg",
       "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0144.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0146-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0147-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0148-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0149-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0151-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0152-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0158-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0162-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0215-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0216-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0217-150x150.jpg",
-      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0218-150x150.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0146.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0147.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0148.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0149.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0151.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0152.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0158.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0162.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0215.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0216.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0217.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0218.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0219.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0220.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0221.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0222.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0223.jpg",
+      "images/produtos/camisa_xadrez_manga_curta_100_algodao/IMG-20240528-WA0224.jpg",
     ]
   },
   {
@@ -101,7 +107,10 @@ const modalDesc = document.getElementById('modal-desc');
 const modalCategory = document.getElementById('modal-category');
 const modalSizes = document.getElementById('modal-sizes');
 const modalWhatsappBtn = document.getElementById('modal-whatsapp-btn');
+const modalThumbnailsWrapper = document.getElementById('modal-thumbnails-wrapper');
 const modalThumbnails = document.getElementById('modal-thumbnails');
+const thumbPrevBtn = document.getElementById('thumb-prev-btn');
+const thumbNextBtn = document.getElementById('thumb-next-btn');
 
 // Initial Load
 document.addEventListener('DOMContentLoaded', () => {
@@ -186,6 +195,22 @@ function setupEventListeners() {
         }
     });
 
+    // Gallery Thumbnails Navigation Buttons
+    if (thumbPrevBtn && thumbNextBtn && modalThumbnails) {
+        thumbPrevBtn.addEventListener('click', () => {
+            const amount = Math.max(200, modalThumbnails.clientWidth * 0.6);
+            modalThumbnails.scrollBy({ left: -amount, behavior: 'smooth' });
+        });
+
+        thumbNextBtn.addEventListener('click', () => {
+            const amount = Math.max(200, modalThumbnails.clientWidth * 0.6);
+            modalThumbnails.scrollBy({ left: amount, behavior: 'smooth' });
+        });
+
+        modalThumbnails.addEventListener('scroll', updateThumbArrowsState);
+        window.addEventListener('resize', updateThumbArrowsState);
+    }
+
     // Zoom effect on modal main image (Pan on hover)
     modalImgContainer.addEventListener('mousemove', (e) => {
         const rect = modalImgContainer.getBoundingClientRect();
@@ -199,6 +224,51 @@ function setupEventListeners() {
         modalImg.style.transformOrigin = 'center center';
         modalImg.style.transform = 'scale(1)';
     });
+}
+
+// Update state of thumbnail navigation arrows
+function updateThumbArrowsState() {
+    if (!modalThumbnails || !thumbPrevBtn || !thumbNextBtn) return;
+    
+    const scrollLeft = modalThumbnails.scrollLeft;
+    const scrollWidth = modalThumbnails.scrollWidth;
+    const clientWidth = modalThumbnails.clientWidth;
+    const maxScroll = scrollWidth - clientWidth;
+    
+    const hasOverflow = scrollWidth > clientWidth + 2;
+    
+    if (!hasOverflow) {
+        thumbPrevBtn.classList.add('hidden');
+        thumbNextBtn.classList.add('hidden');
+        thumbPrevBtn.disabled = true;
+        thumbNextBtn.disabled = true;
+        modalThumbnails.style.justifyContent = 'center';
+        if (modalThumbnailsWrapper) modalThumbnailsWrapper.style.padding = '10px 15px';
+        return;
+    }
+    
+    if (modalThumbnailsWrapper) modalThumbnailsWrapper.style.padding = '10px 40px';
+    thumbPrevBtn.classList.remove('hidden');
+    thumbNextBtn.classList.remove('hidden');
+    modalThumbnails.style.justifyContent = 'flex-start';
+    
+    // Disable/Enable Left Arrow
+    if (scrollLeft <= 2) {
+        thumbPrevBtn.disabled = true;
+        thumbPrevBtn.classList.add('disabled');
+    } else {
+        thumbPrevBtn.disabled = false;
+        thumbPrevBtn.classList.remove('disabled');
+    }
+    
+    // Disable/Enable Right Arrow
+    if (scrollLeft >= maxScroll - 2) {
+        thumbNextBtn.disabled = true;
+        thumbNextBtn.classList.add('disabled');
+    } else {
+        thumbNextBtn.disabled = false;
+        thumbNextBtn.classList.remove('disabled');
+    }
 }
 
 // Open Product Modal
@@ -215,7 +285,7 @@ function openModal(product) {
     const productImages = product.images || [product.image];
     
     if (productImages.length > 1) {
-        modalThumbnails.style.display = 'flex';
+        modalThumbnailsWrapper.style.display = 'flex';
         productImages.forEach((imgUrl, index) => {
             const thumb = document.createElement('img');
             thumb.src = imgUrl;
@@ -234,8 +304,13 @@ function openModal(product) {
             
             modalThumbnails.appendChild(thumb);
         });
+
+        modalThumbnails.scrollLeft = 0;
+        setTimeout(() => {
+            updateThumbArrowsState();
+        }, 50);
     } else {
-        modalThumbnails.style.display = 'none';
+        modalThumbnailsWrapper.style.display = 'none';
     }
 
     // Sizes Rendering
