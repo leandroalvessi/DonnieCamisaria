@@ -224,13 +224,38 @@ li {
 /* Hero Section */
 .hero {
     position: relative;
-    background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&auto=format&fit=crop&q=80');
-    background-size: cover;
-    background-position: center 30%;
     height: 85vh;
     display: flex;
     align-items: center;
     color: white;
+    overflow: hidden;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 2;
 }
 
 .hero-overlay {
@@ -239,13 +264,85 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(11, 15, 25, 0.95) 20%, rgba(11, 15, 25, 0.4) 100%);
+    background: linear-gradient(to right, rgba(11, 15, 25, 0.9) 20%, rgba(11, 15, 25, 0.3) 100%);
+    z-index: 3;
 }
 
 .hero-content {
     position: relative;
-    z-index: 10;
+    z-index: 4;
     max-width: 700px;
+}
+
+/* Slider Controls */
+.hero-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-nav-btn:hover {
+    background: var(--accent);
+    color: var(--primary);
+    border-color: var(--accent);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.hero-nav-btn.prev {
+    left: 30px;
+}
+
+.hero-nav-btn.next {
+    right: 30px;
+}
+
+.hero-nav-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Dots Indicator */
+.hero-dots {
+    position: absolute;
+    bottom: 35px;
+    right: 50px;
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.hero-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.hero-dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.hero-dot.active {
+    background: var(--accent);
+    transform: scale(1.2);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .hero-badge {
@@ -1465,6 +1562,25 @@ li {
     
     .hero-subtitle {
         font-size: 1rem;
+    }
+
+    .hero-nav-btn {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .hero-nav-btn.prev {
+        left: 10px;
+    }
+    
+    .hero-nav-btn.next {
+        right: 10px;
+    }
+    
+    .hero-dots {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 25px;
     }
     
     .toolbar {

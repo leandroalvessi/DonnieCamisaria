@@ -42,21 +42,46 @@ const products = [
   },
   {
     "id": 2,
-    "name": "Camisa Jeans Premium Manga Longa",
-    "category": "jeans",
+    "name": "Camisa Xadrez Manga Longa 100% Algodão",
+    "category": "xadrez",
     "price": "Sob Consulta",
-    "description": "Camisa jeans confeccionada em liocel/algodão leve, proporcionando o visual moderno do jeans com o conforto e maleabilidade de um tecido nobre.",
-    "sizes": ["P", "M", "G", "GG"],
-    "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&auto=format&fit=crop&q=80"
+    "description": "Camisa xadrez clássica manga longa confeccionada em tecido 100% algodão de alta qualidade. Toque macio, excelente durabilidade e caimento confortável.",
+    "sizes": ["P", "M", "G", "GG", "G1", "G2"],
+    "image": "images/produtos/camisa_xadrez_manga_longa_100_algodao/IMG-20240528-WA0177.jpg",
+    "images": [
+      "images/produtos/camisa_xadrez_manga_longa_100_algodao/IMG-20240528-WA0177.jpg",
+      "images/produtos/camisa_xadrez_manga_longa_100_algodao/IMG-20240528-WA0169.jpg",
+      "images/produtos/camisa_xadrez_manga_longa_100_algodao/IMG-20240528-WA0170.jpg",
+      "images/produtos/camisa_xadrez_manga_longa_100_algodao/IMG-20240528-WA0172.jpg",
+      "images/produtos/camisa_xadrez_manga_longa_100_algodao/IMG-20240528-WA0173.jpg",
+      "images/produtos/camisa_xadrez_manga_longa_100_algodao/IMG-20240528-WA0175.jpg",
+      "images/produtos/camisa_xadrez_manga_longa_100_algodao/IMG-20240528-WA0176.jpg",
+      "images/produtos/camisa_xadrez_manga_longa_100_algodao/IMG-20240528-WA0178.jpg",
+    ]
   },
   {
     "id": 3,
-    "name": "Camisa Tencel Soft Manga Longa",
-    "category": "tencel",
+    "name": "Camisa Jeans Manga Curta",
+    "category": "jeans",
     "price": "Sob Consulta",
-    "description": "Confeccionada em fibra de Tencel (liocel), que oferece um caimento fluido, toque extremamente macio e excelente regulação térmica natural.",
+    "description": "Confeccionada em tecido jeans de alta qualidade, esta camisa de manga curta oferece conforto, durabilidade e um toque macio. Seu caimento moderno proporciona liberdade de movimento, sendo uma opção versátil para compor looks casuais com estilo.",
     "sizes": ["P", "M", "G", "GG"],
-    "image": "https://images.unsplash.com/photo-1620012253295-c05518e99309?w=600&auto=format&fit=crop&q=80"
+    "image": "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0293.jpg",
+    "images": [
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0293.jpg",
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0092.jpg",
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0093.jpg",
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0094.jpg",
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0095.jpg",
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0096.jpg",
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0097.jpg",
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0098.jpg", 
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0293.jpg",
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0094.jpg", 
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0095.jpg", 
+        "images/produtos/camisa_jeans_manga_curta/IMG-20240528-WA0096.jpg",  
+           
+    ]
   },
   {
     "id": 4,
@@ -372,4 +397,65 @@ window.addEventListener('click', (e) => {
         waWidget.classList.remove('open');
         waCard.classList.remove('active');
     }
+});
+
+// Hero Section Carousel Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    const prevBtn = document.getElementById('hero-prev-btn');
+    const nextBtn = document.getElementById('hero-next-btn');
+    
+    if (slides.length === 0) return;
+    
+    let currentSlide = 0;
+    let slideInterval;
+    const intervalTime = 6000; // 6 segundos por banner
+
+    function goToSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+
+    function resetTimer() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, intervalTime);
+    }
+
+    // Eventos dos botões de controle
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetTimer();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetTimer();
+        });
+    }
+
+    // Eventos dos indicadores (dots)
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+            resetTimer();
+        });
+    });
+
+    // Iniciar temporizador
+    slideInterval = setInterval(nextSlide, intervalTime);
 });

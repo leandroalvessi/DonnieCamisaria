@@ -40,18 +40,41 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <!-- Hero Carousel Background -->
+        <div class="hero-slider" id="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/produtos/banner/Banner1.png');"></div>
+            <div class="hero-slide" style="background-image: url('images/produtos/banner/Banner2.png');"></div>
+            <div class="hero-slide" style="background-image: url('images/produtos/banner/Banner4.png');"></div>
+            <div class="hero-slide" style="background-image: url('images/produtos/banner/Banner5.png');"></div>
+            <div class="hero-slide" style="background-image: url('images/produtos/banner/Donnie4.png');"></div>
+        </div>
+
         <div class="hero-overlay"></div>
+        
         <div class="container hero-content">
             <span class="hero-badge">Estilo & Sofisticação</span>
             <h1 class="hero-title">Produção Própria & Alta Costura</h1>
             <p class="hero-subtitle">Camisaria premium desenvolvida com tecidos nobres e acabamento minucioso. Conheça nossa coleção exclusiva para atacado e varejo.</p>
             <a href="#catalogo" class="btn-primary-luxury">Explorar Coleção</a>
         </div>
-        <div class="scroll-indicator">
-            <span class="mouse">
-                <span class="wheel"></span>
-            </span>
+
+        <!-- Slider Controls -->
+        <button class="hero-nav-btn prev" id="hero-prev-btn" aria-label="Banner anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="hero-nav-btn next" id="hero-next-btn" aria-label="Próximo banner">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <!-- Slider Dots -->
+        <div class="hero-dots" id="hero-dots">
+            <span class="hero-dot active" data-index="0"></span>
+            <span class="hero-dot" data-index="1"></span>
+            <span class="hero-dot" data-index="2"></span>
+            <span class="hero-dot" data-index="3"></span>
+            <span class="hero-dot" data-index="4"></span>
         </div>
+
     </section>
 
     <!-- Catalog Section -->
