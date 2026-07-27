@@ -141,6 +141,11 @@ const thumbNextBtn = document.getElementById('thumb-next-btn');
 document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     setupEventListeners();
+    
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 });
 
 // Render Products Grid
