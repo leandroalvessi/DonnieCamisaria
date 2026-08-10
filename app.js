@@ -214,6 +214,54 @@ const products = [
   },
   {
     "id": 8,
+    "name": "Calça Sport Fino",
+    "category": "sport_fino",
+    "price": "Sob Consulta",
+    "description": "Calça sport fino com excelente caimento e conforto.",
+    "sizes": ["38","40","42","44","46","48"],
+    "image": "images/produtos/calcas_sport_fino/IMG-20240528-WA0190.webp",
+    "images": [
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0190.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0366.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0368.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0369.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0370.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0371.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0372.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0373.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0374.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0375.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0376.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0377.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0378.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0379.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0380.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0381.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0382.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0383.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0384.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0385.webp",
+        "images/produtos/calcas_sport_fino/IMG-20240528-WA0386.webp"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Calça Jeans Country",
+    "category": "jeans",
+    "price": "Sob Consulta",
+    "description": "Calça jeans estilo country, resistente e com design autêntico.",
+    "sizes": ["38","40","42","44","46","48"],
+    "image": "images/produtos/calca_jeans_country/IMG-20240528-WA0341.webp",
+    "images": [
+        "images/produtos/calca_jeans_country/IMG-20240528-WA0341.webp",
+        "images/produtos/calca_jeans_country/IMG-20240528-WA0342.webp",
+        "images/produtos/calca_jeans_country/IMG-20240528-WA0343.webp",
+        "images/produtos/calca_jeans_country/IMG-20240528-WA0344.webp",
+        "images/produtos/calca_jeans_country/IMG-20240528-WA0357.webp"
+    ]
+  },
+  {
+    "id": 10,
     "name": "Camisa Infantil Manga Longa Tencel",
     "category": "tencel",
     "price": "Sob Consulta",
@@ -250,7 +298,75 @@ const products = [
         "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0325.webp",
         "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0326.webp"
     ]
-  }
+  },
+  {
+    "id": 11,
+    "name": "Camisa Infantil Manga Longa Xadrez",
+    "category": "xadrez",
+    "price": "Sob Consulta",
+    "description": "Camisa infantil manga longa xadrez, ideal para um estilo moderno.",
+    "sizes": ["2","4","6","8","10","12"],
+    "image": "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0327.webp",
+    "images": [
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0327.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0328.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0329.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0330.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0331.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0332.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0333.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0334.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0335.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0336.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0337.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0338.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0339.webp",
+        "images/produtos/camisa_infantil_manga_longa_xadrez/IMG-20240528-WA0340.webp"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Calça Infantil Sport Fino",
+    "category": "sport_fino",
+    "price": "Sob Consulta",
+    "description": "Calça infantil sport fino para um look completo dos pequenos.",
+    "sizes": ["2","4","6","8","10","12"],
+    "image": "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0358.webp",
+    "images": [
+        "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0358.webp",
+        "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0359.webp",
+        "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0360.webp",
+        "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0361.webp",
+        "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0362.webp",
+        "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0363.webp",
+        "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0364.webp",
+        "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0365.webp",
+        "images/produtos/calcas_infantis_sport_fino/IMG-20240528-WA0367.webp"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Bermuda Sport Fino",
+    "category": "sport_fino",
+    "price": "Sob Consulta",
+    "description": "Bermuda sport fino confortável e elegante.",
+    "sizes": ["38","40","42","44","46","48"],
+    "image": "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0351.webp",
+    "images": [
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0351.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0345.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0346.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0347.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0348.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0349.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0350.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0352.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0353.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0354.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0355.webp",
+        "images/produtos/Bermudas_sport_fino/IMG-20240528-WA0356.webp"
+    ]
+  },
 ];
 
 let activeFilter = 'all';
