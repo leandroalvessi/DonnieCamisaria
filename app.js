@@ -83,33 +83,33 @@ const products = [
            
     ]
   },
-  {
-    "id": 4,
-    "name": "Camisa Xadrez Manga Curta Casual",
-    "category": "xadrez",
-    "price": "Sob Consulta",
-    "description": "Versão manga curta da nossa clássica xadrez. Ideal para composições casuais e dias quentes com estilo moderno.",
-    "sizes": ["P", "M", "G", "GG"],
-    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 5,
-    "name": "Calça Sport Fino Alfaiataria",
-    "category": "sport_fino",
-    "price": "Sob Consulta",
-    "description": "Calça sport fino com corte de alfaiataria moderno, tecido com elastano para maior conforto no dia a dia. Perfeita para usar com camisas sociais e casuais.",
-    "sizes": ["38", "40", "42", "44", "46", "48"],
-    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 6,
-    "name": "Bermuda Sport Fino Sarja",
-    "category": "sport_fino",
-    "price": "Sob Consulta",
-    "description": "Bermuda sport fino confeccionada em sarja acetinada com elastano. Modelagem levemente slim que traz elegância para momentos de lazer.",
-    "sizes": ["38", "40", "42", "44", "46"],
-    "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&auto=format&fit=crop&q=80"
-  }
+//   {
+//     "id": 4,
+//     "name": "Camisa Xadrez Manga Curta Casual",
+//     "category": "xadrez",
+//     "price": "Sob Consulta",
+//     "description": "Versão manga curta da nossa clássica xadrez. Ideal para composições casuais e dias quentes com estilo moderno.",
+//     "sizes": ["P", "M", "G", "GG"],
+//     "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=80"
+//   },
+//   {
+//     "id": 5,
+//     "name": "Calça Sport Fino Alfaiataria",
+//     "category": "sport_fino",
+//     "price": "Sob Consulta",
+//     "description": "Calça sport fino com corte de alfaiataria moderno, tecido com elastano para maior conforto no dia a dia. Perfeita para usar com camisas sociais e casuais.",
+//     "sizes": ["38", "40", "42", "44", "46", "48"],
+//     "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&auto=format&fit=crop&q=80"
+//   },
+//   {
+//     "id": 6,
+//     "name": "Bermuda Sport Fino Sarja",
+//     "category": "sport_fino",
+//     "price": "Sob Consulta",
+//     "description": "Bermuda sport fino confeccionada em sarja acetinada com elastano. Modelagem levemente slim que traz elegância para momentos de lazer.",
+//     "sizes": ["38", "40", "42", "44", "46"],
+//     "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&auto=format&fit=crop&q=80"
+//   }
 ];
 
 let activeFilter = 'all';

@@ -21,6 +21,10 @@ async function processDirectory(dir) {
                         await sharp(fullPath)
                             .webp({ quality: 80 })
                             .toFile(webpPath);
+                        
+                        // Excluir a imagem original após a conversão com sucesso
+                        fs.unlinkSync(fullPath);
+                        console.log(`Deleted original: ${fullPath}`);
                     } catch (err) {
                         console.error(`Error converting ${fullPath}:`, err);
                     }
