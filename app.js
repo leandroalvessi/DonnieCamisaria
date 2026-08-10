@@ -247,7 +247,6 @@ const products = [
         "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0322.webp",
         "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0323.webp",
         "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0324.webp",
-        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0325 (1).webp",
         "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0325.webp",
         "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0326.webp"
     ]
