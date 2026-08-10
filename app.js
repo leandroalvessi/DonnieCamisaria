@@ -194,6 +194,63 @@ const products = [
         "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0290.webp",
         "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0292.webp"
     ]
+  },
+  {
+    "id": 7,
+    "name": "Camisa Jeans Manga Longa",
+    "category": "jeans",
+    "price": "Sob Consulta",
+    "description": "Camisa jeans manga longa clássica. Peça chave para qualquer guarda-roupa, oferecendo conforto e estilo atemporal para diversas ocasiões.",
+    "sizes": ["P", "M", "G", "GG"],
+    "image": "images/produtos/camisa_jeans_manga_longa/IMG-20240528-WA0297.webp",
+    "images": [
+        "images/produtos/camisa_jeans_manga_longa/IMG-20240528-WA0297.webp",
+        "images/produtos/camisa_jeans_manga_longa/IMG-20240528-WA0091.webp",
+        "images/produtos/camisa_jeans_manga_longa/IMG-20240528-WA0094.webp",
+        "images/produtos/camisa_jeans_manga_longa/IMG-20240528-WA0298.webp",
+        "images/produtos/camisa_jeans_manga_longa/IMG-20240528-WA0299.webp",
+        "images/produtos/camisa_jeans_manga_longa/IMG-20240528-WA0300.webp"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Camisa Infantil Manga Longa Tencel",
+    "category": "tencel",
+    "price": "Sob Consulta",
+    "description": "Camisa infantil manga longa em tecido tencel. Conforto, leveza e muito estilo para os pequenos em qualquer ocasião.",
+    "sizes": ["2", "4", "6", "8", "10", "12"],
+    "image": "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0318.webp",
+    "images": [
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0299.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0300.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0301.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0302.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0303.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0304.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0305.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0306.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0307.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0308.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0309.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0310.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0311.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0312.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0313.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0314.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0315.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0316.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0317.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0318.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0319.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0320.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0321.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0322.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0323.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0324.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0325 (1).webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0325.webp",
+        "images/produtos/camisa_infantil_manga_longa_tencel/IMG-20240528-WA0326.webp"
+    ]
   }
 ];
 
