@@ -162,15 +162,39 @@ const products = [
         "images/produtos/camisa_manga_curta_tencel/IMG-20240528-WA0245.webp"
     ]
   },
-//   {
-//     "id": 6,
-//     "name": "Bermuda Sport Fino Sarja",
-//     "category": "sport_fino",
-//     "price": "Sob Consulta",
-//     "description": "Bermuda sport fino confeccionada em sarja acetinada com elastano. Modelagem levemente slim que traz elegância para momentos de lazer.",
-//     "sizes": ["38", "40", "42", "44", "46"],
-//     "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&auto=format&fit=crop&q=80"
-//   }
+  {
+    "id": 6,
+    "name": "Camisa Manga Longa 60% Algodão 40% Poliéster",
+    "category": "sport_fino",
+    "price": "Sob Consulta",
+    "description": "Camisa de manga longa confeccionada com uma mistura perfeita de 60% algodão e 40% poliéster, garantindo durabilidade, menos amassados e muito conforto.",
+    "sizes": ["P", "M", "G", "GG"],
+    "image": "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0291.webp",
+    "images": [
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0291.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0059.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0072.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0074.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0075.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0078.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0276.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0277.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0278.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0279.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0280.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0281.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0282.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0283.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0284.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0285.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0286.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0287.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0288.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0289.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0290.webp",
+        "images/produtos/camisa_manga_longa_60_algodão_e_40_poliester/IMG-20240528-WA0292.webp"
+    ]
+  }
 ];
 
 let activeFilter = 'all';
