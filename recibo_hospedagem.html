@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatura Paga</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 13px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding-top: 20px;
+        }
+        /* Ribbon PAGO */
+        .ribbon {
+            position: absolute;
+            top: 20px;
+            right: -60px;
+            background-color: #8cc63f;
+            color: white;
+            padding: 10px 80px;
+            font-size: 32px;
+            font-weight: bold;
+            transform: rotate(45deg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 20px;
+        }
+        .logo-placeholder {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0056b3;
+            display: flex;
+            align-items: center;
+        }
+        .company-info {
+            text-align: right;
+            line-height: 1.4;
+        }
+        
+        /* Invoice Details Box */
+        .invoice-box {
+            background-color: #f2f2f2;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        .invoice-box h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+        .invoice-box p {
+            margin: 5px 0;
+        }
+
+        /* Client Info */
+        .client-info {
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+        .client-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        .right {
+            text-align: right;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .summary-row td {
+            border: none;
+            border-right: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+        }
+        .summary-row:last-child td {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 11px;
+            color: #666;
+        }
+
+        .print-btn {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        @media print {
+            body { padding: 0; }
+            .print-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="ribbon">PAGO</div>
+
+        <div class="header" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;">
+            <!-- Cabeçalho removido -->
+        </div>
+
+        <div class="invoice-box">
+            <h2>Fatura #57488633-INT</h2>
+            <p>Data da Fatura: 12/07/2026</p>
+            <p>Vencimento: 11/08/2026</p>
+        </div>
+
+        <div class="client-info">
+            <h3>Faturado para</h3>
+            Bonnie Jose Dutra<br>
+            Att.: Bonnie Jose Dutra<br>
+            Rua Leopoldo de Bulhões, SN, Qd. H Lt. 1, Casa 02, Setor Maysa Extensão<br>
+            Setor Maysa Extensão<br>
+            Goiânia, GO, 74485-681<br>
+            Brazil<br><br>
+            CPF/CNPJ: 28.661.888/0001-22
+        </div>
+
+        <!-- Tabela de Itens -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th class="right" style="width: 150px;">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Renovação de Domínio - donniecamisaria.com.br - 1 Ano(s) (11/09/2026 - 10/09/2027)</td>
+                    <td class="right">R$70,99</td>
+                </tr>
+                <tr>
+                    <td>Hospedagem / Servidor</td>
+                    <td class="right">R$437,70</td>
+                </tr>
+                
+                <tr class="summary-row">
+                    <td class="right bold" style="background-color: #f2f2f2;">Sub Total</td>
+                    <td class="right bold">R$508,69</td>
+                </tr>
+                <tr class="summary-row">
+                    <td class="right bold" style="background-color: #f2f2f2;">Crédito</td>
+                    <td class="right bold">R$0,00</td>
+                </tr>
+                <tr class="summary-row">
+                    <td class="right bold" style="background-color: #f2f2f2;">Total</td>
+                    <td class="right bold">R$508,69</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabela de Transações -->
+        <h3>Transações</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Transação</th>
+                    <th>Forma</th>
+                    <th>ID. Transação</th>
+                    <th class="right">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">10/08/2026</td>
+                    <td style="text-align: center;">Pix</td>
+                    <td style="text-align: center;">E18236120202608101800s0080e680b4</td>
+                    <td class="right">R$508,69</td>
+                </tr>
+                <tr class="summary-row">
+                    <td colspan="3" class="right bold" style="background-color: #f2f2f2;">Balanço</td>
+                    <td class="right bold">R$0,00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            Gerado em PDF <span id="data-atual"></span>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir PDF</button>
+
+    <script>
+        const dataAtual = new Date();
+        document.getElementById('data-atual').textContent = dataAtual.toLocaleDateString('pt-BR');
+    </script>
+</body>
+</html>
